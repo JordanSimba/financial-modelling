@@ -30,6 +30,7 @@ mean, std_dev = 0, 0.01 # 1/10 deviation. Careful with dev as percentage of step
 noise = lambda : np.random.normal(mean, std_dev, dim)
 # movement including Gaussian noise
 
+# Method which returns a random linear combination of vectors of our vector space
 def get_rand_linear_comb(vector_space):
     random_vectors = rand.sample(vector_space, rand_int(1,dim))
     # TODO add random linear weights alpha & beta in future
